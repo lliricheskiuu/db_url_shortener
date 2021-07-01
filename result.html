@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <title>{% block title %}URL-Shortener{% endblock %}</title>
+    </head>
+    <body>
+        <h1>{{ message }}</h1>
+        {% if key %}<h1><a href="{% url 'url_redirect' key %}">{{ key }}</a> </h1>{% endif %}
+        <form action="" method="POST">
+            <input type="text" name="url">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
